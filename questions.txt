@@ -69,6 +69,12 @@ Why store extracted text separately from the original file?
 How would you process a 500MB PDF?
 How would you make document processing scalable?
 
+Why normalize chunks into a separate table?
+Why use ON DELETE CASCADE?
+Why not store the entire document text in the documents table?
+Why maintain a separate processing_jobs table?
+Why use enums for status values?
+
 
 
 
