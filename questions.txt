@@ -37,6 +37,40 @@ PostgreSQL
 Why UUID instead of Integer?
 Why TIMESTAMP WITH TIME ZONE?
 
+JWT
+Difference between Authentication and Authorization?
+What is OAuth2PasswordBearer?
+Why use Bearer Token?
+What happens if JWT expires?
+Why shouldn't we store passwords?
+SQLAlchemy
+Why use select() instead of query()?
+What is scalar_one_or_none()?
+FastAPI
+What is Depends()?
+How does Dependency Injection work?
+
+Difference between OCR and PDF parsing.
+Why use BackgroundTasks?
+Why chunk documents?
+How do you process scanned PDFs?
+Why store metadata separately?
+Difference between synchronous and asynchronous file uploads.
+How would you scale document processing?
+How would you detect duplicate documents?
+
+
+Why use PyMuPDF instead of PyPDF2?
+How do you detect scanned PDFs?
+Why chunk text before embedding?
+Why use overlap?
+Why perform OCR only when needed?
+Why store extracted text separately from the original file?
+How would you process a 500MB PDF?
+How would you make document processing scalable?
+
+
+
 
 backend/
 │
