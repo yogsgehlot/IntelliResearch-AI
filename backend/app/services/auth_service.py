@@ -3,6 +3,7 @@ from app.core.security import (create_access_token,create_refresh_token,hash_pas
 from app.models.user import User
 from app.repositories.user_repository import UserRepository
 from app.schemas.auth import LoginRequest, RegisterRequest
+from app.schemas.token import TokenResponse
 
 class AuthService:
 
@@ -31,7 +32,7 @@ class AuthService:
         if not verify_password(request.password,user.password_hash,):
             raise ValueError("Invalid credentials")
 
-        return {
-            "access_token": create_access_token(str(user.id)),
-            "refresh_token": create_refresh_token(str(user.id)),
-        }
+        return TokenResponse(
+            access_token=access,
+            refresh_token=refresh,
+        )

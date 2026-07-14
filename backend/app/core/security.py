@@ -44,3 +44,18 @@ def create_refresh_token(subject: str) -> str:
         settings.JWT_REFRESH_SECRET,
         algorithm=settings.JWT_ALGORITHM,
     )
+
+from jose import JWTError
+
+
+def decode_access_token(token: str) -> dict:
+    try:
+        payload = jwt.decode(
+            token,
+            settings.JWT_SECRET_KEY,
+            algorithms=[settings.JWT_ALGORITHM],
+        )
+        return payload
+
+    except JWTError:
+        return {}

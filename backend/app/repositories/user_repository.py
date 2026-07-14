@@ -1,10 +1,12 @@
 from sqlalchemy.orm import Session
 from app.models.user import User
+from sqlalchemy import select
 
 class UserRepository:
     @staticmethod
     def get_by_email(db: Session,email: str,) -> User | None:
-        return (db.query(User).filter(User.email == email).first())
+        stmt = select(User).where(User.email == email)
+        return db.execute(stmt).scalar_one_or_none()
 
     @staticmethod
     def create(db: Session,user: User,) -> User:
