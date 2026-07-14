@@ -25,8 +25,17 @@ What is Alembic?
 Difference between create_engine() and sessionmaker()?
 Why use pool_pre_ping=True?
 
-
-
+SQLAlchemy
+What is Mapped[]?
+Why use mapped_column() instead of Column()?
+Difference between server_default and default?
+Alembic
+Why do we need migrations?
+What does autogenerate do?
+Why import models in database/base.py?
+PostgreSQL
+Why UUID instead of Integer?
+Why TIMESTAMP WITH TIME ZONE?
 
 
 backend/
