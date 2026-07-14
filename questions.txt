@@ -1,0 +1,74 @@
+Why did you choose FastAPI instead of Flask?
+What is ASGI?
+Why use environment variables?
+Why use pydantic-settings?
+What is a health check endpoint?
+Why use structured logging instead of print()?
+Why pin dependency versions?
+What is the purpose of Swagger/OpenAPI?
+
+What is an ORM, and why use SQLAlchemy?
+What is a database session?
+What is connection pooling?
+Why use UUIDs instead of integer IDs?
+What problem does Alembic solve?
+Why separate repositories from services?
+How does dependency injection simplify database access?
+Why containerize PostgreSQL with Docker?
+
+Why use PostgreSQL instead of SQLite?
+What is SQLAlchemy?
+What is SessionLocal?
+Why use Dependency Injection for DB sessions?
+What is Connection Pooling?
+What is Alembic?
+Difference between create_engine() and sessionmaker()?
+Why use pool_pre_ping=True?
+
+
+
+
+
+backend/
+│
+├── app/
+│   ├── api/
+│   │   ├── deps.py
+│   │   └── v1/
+│   │       ├── api.py
+│   │       └── endpoints/
+│   │           ├── auth.py
+│   │           └── health.py
+│   │
+│   ├── core/
+│   │   ├── config.py
+│   │   ├── security.py
+│   │   └── logger.py
+│   │
+│   ├── database/
+│   │   ├── base.py
+│   │   ├── session.py
+│   │   └── init_db.py
+│   │
+│   ├── models/
+│   │   └── user.py
+│   │
+│   ├── repositories/
+│   │   └── user_repository.py
+│   │
+│   ├── services/
+│   │   └── auth_service.py
+│   │
+│   ├── schemas/
+│   │   ├── auth.py
+│   │   └── token.py
+│   │
+│   ├── utils/
+│   └── main.py
+│
+├── alembic/
+├── tests/
+├── Dockerfile
+├── docker-compose.yml
+├── requirements.txt
+└── .env
