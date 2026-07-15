@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Virtual Environment
+.venv/
+venv/
+
+# Environment
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# Database
+*.db
+*.sqlite3
+
+# Logs
+logs/
+*.log
+
+# Uploads
+uploads/
+storage/
+
+# Vector Store
+data/vectorstore/
+index.bin
+metadata.json
+
+# Models
+models/
+checkpoints/
+
+# HuggingFace Cache
+.cache/
+huggingface/
+hf_cache/
+
+# PaddleOCR
+.paddlex/
+.paddleocr/
+
+# NLTK
+nltk_data/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Alembic cache
+alembic/__pycache__/
+
+# Build
+dist/
+build/

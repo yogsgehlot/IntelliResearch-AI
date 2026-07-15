@@ -2,6 +2,8 @@ import enum
 from sqlalchemy import Boolean, Enum, String
 from sqlalchemy.orm import Mapped, mapped_column
 from app.models.base import BaseModel
+from sqlalchemy.orm import relationship
+
 
 class UserRole(str, enum.Enum):
     ADMIN = "ADMIN"
@@ -40,4 +42,9 @@ class User(BaseModel):
     is_verified: Mapped[bool] = mapped_column(
         Boolean,
         default=False,
+    )
+    
+    projects = relationship(
+        "Project",
+        back_populates="owner",
     )

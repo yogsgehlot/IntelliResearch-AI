@@ -100,7 +100,13 @@ Why isolate the LLM behind an OllamaClient?
 Why keep the model name in a separate configuration file?
 How would you swap from Qwen to Gemma without changing business logic?
 
-
+Why combine BM25 with vector search?
+What problems does conversation memory solve?
+Why rewrite follow-up queries before retrieval?
+Why rerank after retrieval instead of before?
+What are the benefits of streaming LLM responses?
+How would you persist chat history in production?
+How would you handle multiple concurrent users with separate memories?
 
 backend/
 │

@@ -395,3 +395,312 @@
 2026-07-15 12:38:15.694 | INFO     | app.main:<module>:19 - Application Started
 2026-07-15 12:38:40.758 | INFO     | app.main:<module>:19 - Application Started
 2026-07-15 12:39:03.545 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 12:39:25.003 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 12:48:52.684 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 12:49:08.893 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 12:54:25.874 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 12:54:41.761 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 12:54:58.043 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 12:55:14.652 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 12:55:31.185 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 12:55:47.713 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 12:56:04.077 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 12:56:19.848 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 12:56:41.922 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 12:56:58.248 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 12:57:30.632 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 12:57:46.794 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 12:58:03.238 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 12:58:19.611 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 12:58:37.296 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 12:58:53.495 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 12:59:09.847 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 12:59:26.255 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 12:59:42.447 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 12:59:59.015 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:00:15.003 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:00:31.145 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:00:47.780 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:02:48.360 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:03:10.157 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:03:31.831 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:25:39.585 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:33:03.143 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:33:25.413 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:33:47.711 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:34:31.397 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:34:52.842 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:35:13.992 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:38:16.477 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:38:38.134 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:38:59.988 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:41:08.289 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:41:29.902 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:41:51.680 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:42:13.564 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:42:35.038 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:43:49.508 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:44:11.262 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:44:32.772 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:45:28.555 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:46:01.295 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:46:22.681 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:46:43.898 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:53:03.835 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:53:25.889 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:53:47.757 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:54:09.427 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:54:30.917 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:54:52.583 | INFO     | app.main:<module>:19 - Application Started
+2026-07-15 13:55:13.993 | INFO     | app.main:<module>:21 - Application Started
+2026-07-15 13:55:35.443 | INFO     | app.main:<module>:21 - Application Started
+2026-07-15 13:55:57.383 | INFO     | app.main:<module>:32 - Application Started
+2026-07-15 13:56:18.767 | INFO     | app.main:<module>:32 - Application Started
+2026-07-15 13:56:40.353 | INFO     | app.main:<module>:32 - Application Started
+2026-07-15 14:28:49.721 | INFO     | app.main:<module>:36 - Application Started
+2026-07-15 14:28:49.722 | INFO     | app.main:lifespan:14 - Initializing AI Components...
+2026-07-15 14:28:49.722 | INFO     | app.main:lifespan:16 - AI Components Ready
+2026-07-15 14:29:11.197 | INFO     | app.main:<module>:36 - Application Started
+2026-07-15 14:29:11.198 | INFO     | app.main:lifespan:14 - Initializing AI Components...
+2026-07-15 14:29:11.198 | INFO     | app.main:lifespan:16 - AI Components Ready
+2026-07-15 14:29:32.932 | INFO     | app.main:<module>:36 - Application Started
+2026-07-15 14:29:32.934 | INFO     | app.main:lifespan:14 - Initializing AI Components...
+2026-07-15 14:29:32.934 | INFO     | app.main:lifespan:16 - AI Components Ready
+2026-07-15 14:30:06.063 | INFO     | app.main:lifespan:20 - Application Shutdown
+2026-07-15 14:30:27.684 | INFO     | app.main:<module>:36 - Application Started
+2026-07-15 14:30:27.686 | INFO     | app.main:lifespan:14 - Initializing AI Components...
+2026-07-15 14:30:27.686 | INFO     | app.main:lifespan:16 - AI Components Ready
+2026-07-15 14:30:49.284 | INFO     | app.main:<module>:36 - Application Started
+2026-07-15 14:30:49.285 | INFO     | app.main:lifespan:14 - Initializing AI Components...
+2026-07-15 14:30:49.285 | INFO     | app.main:lifespan:16 - AI Components Ready
+2026-07-15 14:31:10.754 | INFO     | app.main:<module>:36 - Application Started
+2026-07-15 14:31:10.755 | INFO     | app.main:lifespan:14 - Initializing AI Components...
+2026-07-15 14:31:10.755 | INFO     | app.main:lifespan:16 - AI Components Ready
+2026-07-15 14:31:32.207 | INFO     | app.main:<module>:36 - Application Started
+2026-07-15 14:31:32.208 | INFO     | app.main:lifespan:14 - Initializing AI Components...
+2026-07-15 14:31:32.208 | INFO     | app.main:lifespan:16 - AI Components Ready
+2026-07-15 14:31:54.435 | INFO     | app.main:<module>:36 - Application Started
+2026-07-15 14:31:54.436 | INFO     | app.main:lifespan:14 - Initializing AI Components...
+2026-07-15 14:31:54.436 | INFO     | app.main:lifespan:16 - AI Components Ready
+2026-07-15 14:37:25.045 | INFO     | app.main:lifespan:20 - Application Shutdown
+2026-07-15 14:37:47.081 | INFO     | app.main:<module>:36 - Application Started
+2026-07-15 14:37:47.082 | INFO     | app.main:lifespan:14 - Initializing AI Components...
+2026-07-15 14:38:09.059 | INFO     | app.main:<module>:36 - Application Started
+2026-07-15 14:38:09.059 | INFO     | app.main:lifespan:14 - Initializing AI Components...
+2026-07-15 14:38:31.079 | INFO     | app.main:<module>:36 - Application Started
+2026-07-15 14:38:31.079 | INFO     | app.main:lifespan:14 - Initializing AI Components...
+2026-07-15 14:38:53.679 | INFO     | app.main:<module>:36 - Application Started
+2026-07-15 14:38:53.680 | INFO     | app.main:lifespan:14 - Initializing AI Components...
+2026-07-15 14:40:20.724 | INFO     | app.main:<module>:36 - Application Started
+2026-07-15 14:40:20.725 | INFO     | app.main:lifespan:14 - Initializing AI Components...
+2026-07-15 15:03:48.311 | INFO     | app.main:<module>:36 - Application Started
+2026-07-15 15:03:48.312 | INFO     | app.main:lifespan:14 - Initializing AI Components...
+2026-07-15 15:04:36.776 | INFO     | app.main:<module>:36 - Application Started
+2026-07-15 15:04:36.777 | INFO     | app.main:lifespan:14 - Initializing AI Components...
+2026-07-15 15:04:58.108 | INFO     | app.main:<module>:36 - Application Started
+2026-07-15 15:04:58.109 | INFO     | app.main:lifespan:14 - Initializing AI Components...
+2026-07-15 15:50:08.499 | INFO     | app.main:<module>:36 - Application Started
+2026-07-15 15:50:08.500 | INFO     | app.main:lifespan:14 - Initializing AI Components...
+2026-07-15 15:53:49.119 | INFO     | app.main:<module>:36 - Application Started
+2026-07-15 15:53:49.120 | INFO     | app.main:lifespan:14 - Initializing AI Components...
+2026-07-15 15:54:25.155 | INFO     | app.main:<module>:36 - Application Started
+2026-07-15 15:54:25.156 | INFO     | app.main:lifespan:14 - Initializing AI Components...
+2026-07-15 15:54:25.222 | INFO     | app.main:lifespan:16 - AI Components Ready
+2026-07-15 15:54:27.841 | INFO     | app.main:lifespan:20 - Application Shutdown
+2026-07-15 15:54:49.614 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 15:54:49.615 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 15:54:49.638 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 15:55:11.117 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 15:55:11.117 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 15:55:11.147 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 15:55:32.508 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 15:55:32.509 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 15:55:32.535 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 15:56:30.279 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-15 15:56:55.186 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 15:56:55.187 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 15:56:55.212 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:01:10.607 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-15 16:01:55.133 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:01:55.134 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:01:55.196 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:02:17.600 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:02:17.601 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:02:17.630 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:02:40.527 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:02:40.528 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:02:40.555 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:02:47.645 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-15 16:03:09.357 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:03:09.358 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:03:09.383 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:05:01.958 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:05:01.959 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:05:01.982 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:05:23.414 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:05:23.415 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:05:23.437 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:05:45.160 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:05:45.160 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:05:45.186 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:06:14.769 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-15 16:06:40.232 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:06:40.233 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:06:40.256 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:07:43.203 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-15 16:08:06.091 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:08:06.092 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:08:06.115 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:12:15.746 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-15 16:12:37.880 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:12:37.882 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:12:37.906 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:12:59.609 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:12:59.610 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:12:59.636 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:13:21.573 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:13:21.574 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:13:21.601 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:13:43.770 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:13:43.771 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:13:43.795 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:14:05.598 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:14:05.599 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:14:05.622 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:14:27.836 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:14:27.837 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:14:27.864 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:14:49.865 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:14:49.866 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:14:49.892 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:15:11.816 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:15:11.817 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:15:11.841 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:19:53.563 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-15 16:20:15.770 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:20:15.771 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:20:15.796 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:20:38.004 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:20:38.005 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:20:38.030 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:21:00.047 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:21:00.048 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:21:00.075 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:21:21.831 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:21:21.832 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:21:21.857 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:21:41.070 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-15 16:22:02.936 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:22:02.936 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:22:02.960 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:22:25.049 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:22:25.049 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:22:25.072 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:22:43.319 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-15 16:23:05.196 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:23:05.197 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:23:05.222 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:23:21.502 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-15 16:23:43.466 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:23:43.467 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:23:43.492 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:27:09.459 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-15 16:27:31.594 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:27:31.595 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:27:31.617 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:28:29.784 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-15 16:28:51.863 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:28:51.864 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:28:51.891 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:29:11.298 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-15 16:29:33.343 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:29:33.344 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:29:33.344 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:29:41.102 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-15 16:30:04.983 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:30:04.984 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:30:04.985 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:57:18.093 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-15 16:57:40.867 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:57:40.868 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:57:40.868 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 16:58:03.273 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 16:58:03.274 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 16:58:03.274 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 18:13:29.304 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-15 18:13:51.872 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 18:13:51.873 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 18:13:51.873 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 18:16:50.926 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-15 18:17:15.322 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 18:17:15.322 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 18:17:15.323 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 18:22:22.789 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-15 18:22:47.535 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 18:22:47.536 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 18:22:47.537 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 18:23:09.307 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 18:23:09.308 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 18:23:09.308 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 18:23:31.867 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 18:23:31.868 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 18:23:31.868 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 18:23:54.442 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 18:23:54.443 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 18:23:54.443 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 18:24:16.645 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 18:24:16.647 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 18:24:16.647 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 18:24:39.375 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 18:24:39.376 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 18:24:39.376 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 18:24:41.123 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-15 18:25:03.518 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 18:25:03.518 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 18:25:03.544 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 18:25:26.029 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 18:25:26.030 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 18:25:26.053 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 18:25:48.120 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 18:25:48.121 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 18:25:48.148 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 18:26:11.958 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 18:26:11.960 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 18:26:11.990 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 18:27:00.924 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-15 18:27:25.667 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 18:27:25.667 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 18:27:25.690 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 18:27:48.169 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 18:27:48.170 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 18:27:48.193 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 18:28:11.190 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 18:28:11.191 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 18:28:11.213 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 18:28:33.571 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 18:28:33.572 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 18:28:33.597 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 18:28:56.665 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 18:28:56.666 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 18:28:56.703 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 18:29:19.477 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 18:29:19.477 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 18:29:19.501 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 18:29:42.079 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 18:29:42.080 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 18:29:42.104 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 18:30:04.158 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 18:30:04.159 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 18:30:04.182 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 18:30:27.027 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 18:30:27.028 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 18:30:27.050 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 18:30:50.069 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 18:30:50.070 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 18:30:50.104 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 18:31:12.557 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 18:31:12.558 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 18:31:12.582 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-15 18:31:34.568 | INFO     | app.main:<module>:37 - Application Started
+2026-07-15 18:31:34.569 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-15 18:31:34.591 | INFO     | app.main:lifespan:17 - AI Components Ready

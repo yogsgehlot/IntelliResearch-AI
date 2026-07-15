@@ -37,8 +37,13 @@ class DocumentProcessor:
             vector_store.add(vector.reshape(1, -1))
             metadata.append({
                 "document_id": str(document.id),
+                "document_name": document.original_name,
+                "page": None,                 # We'll populate this for PDFs later
                 "chunk_index": index,
                 "content": chunk,
+                "language": language,
+                "tokens": len(chunk.split()),
+                "project_id": str(document.project_id),
             })
 
         metadata_store.save(metadata)

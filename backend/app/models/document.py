@@ -3,7 +3,8 @@ from uuid import UUID
 from sqlalchemy import BigInteger, Enum as SqlEnum, ForeignKey, Integer, String
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from app.models.base import BaseModel
-
+from sqlalchemy import ForeignKey
+from sqlalchemy.orm import relationship
 class DocumentStatus(str, Enum):
     UPLOADED = "UPLOADED"
     PROCESSING = "PROCESSING"
@@ -34,4 +35,14 @@ class Document(BaseModel):
         "ProcessingJob",
         back_populates="document",
         cascade="all, delete-orphan",
+    )
+    
+    project_id = mapped_column(
+        ForeignKey("projects.id"),
+        nullable=True,
+    )
+
+    project = relationship(
+        "Project",
+        back_populates="documents",
     )
