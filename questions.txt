@@ -81,6 +81,24 @@ What security risks exist with file uploads?
 Why separate storage from business logic?
 How would you migrate from local storage to S3?
 
+What are embeddings?
+Why use all-MiniLM-L6-v2?
+Why normalize embeddings?
+Why use cosine similarity (implemented with IndexFlatIP)?
+Why doesn't FAISS store metadata?
+How do you keep metadata aligned with vector IDs?
+What happens if the index grows to millions of vectors?
+Why choose FAISS over PostgreSQL full-text search?
+
+Ollama
+What is Ollama?
+Why use a local LLM instead of cloud APIs?
+What are the trade-offs between local and hosted models?
+What happens if the model isn't running?
+LLM Integration
+Why isolate the LLM behind an OllamaClient?
+Why keep the model name in a separate configuration file?
+How would you swap from Qwen to Gemma without changing business logic?
 
 
 
