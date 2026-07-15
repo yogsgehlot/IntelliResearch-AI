@@ -75,6 +75,12 @@ Why not store the entire document text in the documents table?
 Why maintain a separate processing_jobs table?
 Why use enums for status values?
 
+Why store a generated filename instead of the original filename?
+Why validate file extensions on the server?
+What security risks exist with file uploads?
+Why separate storage from business logic?
+How would you migrate from local storage to S3?
+
 
 
 

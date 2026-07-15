@@ -1,14 +1,12 @@
-from pathlib import Path
 from fastapi import UploadFile
 from sqlalchemy.orm import Session
-from app.models.document import Document
-from app.models.document import DocumentStatus
+from app.ai.processor import DocumentProcessor
+from app.models.document import Document, DocumentStatus
 from app.repositories.document_repository import DocumentRepository
 from app.storage.storage_service import storage
 from app.utils.file_utils import (generate_filename,validate_extension,)
 
 class DocumentService:
-
     @staticmethod
     def upload(db: Session,user,file: UploadFile,):
         extension = validate_extension(file.filename)
@@ -22,7 +20,9 @@ class DocumentService:
             extension=extension,
             file_size=file.size,
             storage_path=storage_path,
-            status=DocumentStatus.UPLOADED,
+            status=DocumentStatus.PROCESSING,
         )
 
-        return DocumentRepository.create(db,document,)
+        document = DocumentRepository.create(db,document,)
+        DocumentProcessor.process(db,document,)
+        return document
