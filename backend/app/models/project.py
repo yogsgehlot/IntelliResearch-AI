@@ -1,4 +1,5 @@
 import uuid
+from sqlalchemy.dialects.postgresql import UUID
 
 from sqlalchemy import ForeignKey
 from sqlalchemy import String
@@ -7,13 +8,19 @@ from sqlalchemy.orm import mapped_column
 from sqlalchemy.orm import relationship
 
 from app.models.base import BaseModel
+# define/import UUID 
+
 
 
 class Project(BaseModel):
 
     __tablename__ = "projects"
 
-    id: Mapped[uuid.UUID]
+    id = mapped_column(
+        UUID(as_uuid=True),
+        primary_key=True,
+        default=uuid.uuid4,
+    )
 
     name: Mapped[str] = mapped_column(
         String(255),
@@ -44,4 +51,23 @@ class Project(BaseModel):
         "ResearchNote",
         back_populates="project",
         cascade="all, delete",
+    )
+
+    summaries = relationship(
+        "ResearchSummary",
+        back_populates="project",
+        cascade="all, delete",
+    )
+
+    citations = relationship(
+        "Citation",
+        back_populates="project",
+        cascade="all, delete",
+    )
+
+    summary = relationship(
+        "ResearchSummary",
+        uselist=False,
+        cascade="all, delete-orphan",
+        back_populates="project",
     )

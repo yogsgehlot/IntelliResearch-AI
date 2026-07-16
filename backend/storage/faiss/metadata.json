@@ -48,5 +48,55 @@
         "language": "en",
         "tokens": 8,
         "project_id": "None"
+    },
+    {
+        "document_id": "19768744-0779-4461-baeb-ca6252b8aeed",
+        "document_name": "Yash_Mathur 1.pdf",
+        "page": null,
+        "chunk_index": 0,
+        "content": "Job Experience: Around 2.5 years of hands on experience in Web/Software application development. Experience with ColdFusion, ColdBox, Laravel, VueJs etc. Projects: Name Yash Mathur Role Software Engineer Experience 2.5 years Project IO CRM/ IOMail Technologies Laravel Roles & Responsibilities  Requirement analysis, planning of the project.  Assistance to development/deployment issues of the requirements.  Developed API’s in Laravel.  Developed Laravel CRM for admin use. Project BuzzWorks Tec",
+        "language": "en",
+        "tokens": 69,
+        "project_id": "None"
+    },
+    {
+        "document_id": "19768744-0779-4461-baeb-ca6252b8aeed",
+        "document_name": "Yash_Mathur 1.pdf",
+        "page": null,
+        "chunk_index": 1,
+        "content": "irements.  Developed API’s in Laravel.  Developed Laravel CRM for admin use. Project BuzzWorks Technologies Laravel, MySQL, jQuery Roles & Responsibilities  Requirement analysis, planning of the project.  Assistance to development/deployment issues of the requirements.  Developed API’s in Laravel.  Developed Laravel CRM for admin use. Project Exceleron Technologies Coldfusion, Adobe coldfusion 2023, MSSQL, jQuery, .Net Roles & Responsibilities  Requirement analysis, planning of the projec",
+        "language": "en",
+        "tokens": 69,
+        "project_id": "None"
+    },
+    {
+        "document_id": "19768744-0779-4461-baeb-ca6252b8aeed",
+        "document_name": "Yash_Mathur 1.pdf",
+        "page": null,
+        "chunk_index": 2,
+        "content": "on 2023, MSSQL, jQuery, .Net Roles & Responsibilities  Requirement analysis, planning of the project.  Client meeting and communication.  Developed mobile UI for web view usage.  Assistance to development/deployment on server. Project Keywest tours and travels Technologies Coldbox, MySQL, Roles & Responsibilities  Developed discount requirement for tours form.  Developed UI for invoice mails. Project Global Estate Technologies Coldbox, MySQL, jQuery Roles & Responsibilities  Developed age",
+        "language": "en",
+        "tokens": 71,
+        "project_id": "None"
+    },
+    {
+        "document_id": "19768744-0779-4461-baeb-ca6252b8aeed",
+        "document_name": "Yash_Mathur 1.pdf",
+        "page": null,
+        "chunk_index": 3,
+        "content": ". Project Global Estate Technologies Coldbox, MySQL, jQuery Roles & Responsibilities  Developed agent module in admin.  Developed landing page UI to include youtube player, x feed , Instagram feed and testimonials. Project Worx Technologies Coldbox, Vue.js Roles & Responsibilities  Requirement analysis, planning of the project.  Developed contacts, registration modules in Admin CRM.  Developed roles and permissions module in Admin CRM.",
+        "language": "en",
+        "tokens": 65,
+        "project_id": "None"
+    },
+    {
+        "document_id": "19768744-0779-4461-baeb-ca6252b8aeed",
+        "document_name": "Yash_Mathur 1.pdf",
+        "page": null,
+        "chunk_index": 4,
+        "content": "d roles and permissions module in Admin CRM.",
+        "language": "en",
+        "tokens": 8,
+        "project_id": "None"
     }
 ]

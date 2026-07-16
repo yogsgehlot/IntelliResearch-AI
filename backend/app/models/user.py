@@ -3,8 +3,6 @@ from sqlalchemy import Boolean, Enum, String
 from sqlalchemy.orm import Mapped, mapped_column
 from app.models.base import BaseModel
 from sqlalchemy.orm import relationship
-
-
 class UserRole(str, enum.Enum):
     ADMIN = "ADMIN"
     USER = "USER"

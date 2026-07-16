@@ -6,3 +6,5 @@ from app.models.document import Document
 from app.models.document_chunk import DocumentChunk
 from app.models.processing_job import ProcessingJob
 from app.models.research_note import ResearchNote
+# from app.models.research_summary import ResearchSummary
+from app.models.citation import Citation

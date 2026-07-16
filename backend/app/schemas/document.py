@@ -4,6 +4,7 @@ from app.models.document import DocumentStatus
 
 class DocumentResponse(BaseModel):
     id: UUID
+    project_id: UUID | None = None
     original_name: str
     status: DocumentStatus
     file_size: int

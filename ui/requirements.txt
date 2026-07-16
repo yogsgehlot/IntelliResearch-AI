@@ -1,0 +1,8 @@
+streamlit>=1.45.0
+requests
+python-dotenv
+pandas
+streamlit-option-menu
+streamlit-extras
+streamlit-lottie
+streamlit-authenticator
