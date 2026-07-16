@@ -5,17 +5,17 @@ from utils.session import (
     is_authenticated,
 )
 
-from pages.login import render as login_page
+from views.login import render as login_page
 
-from pages.dashboard import render as dashboard_page
+from views.dashboard import render as dashboard_page
 
 from components.sidebar import render_sidebar
 
 from components.header import render as header
-from pages.projects import render as projects_page
-from pages.upload import render as upload_page
-from pages.chat import render as chat_page
-from pages.notes import render as notes_page
+from views.projects import render as projects_page
+from views.upload import render as upload_page
+from views.chat import render as chat_page
+from views.notes import render as notes_page
 
 init_session()
 

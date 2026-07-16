@@ -36,7 +36,7 @@ index.bin
 metadata.json
 
 # Models
-models/
+# models/
 checkpoints/
 
 # HuggingFace Cache

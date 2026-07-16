@@ -6,7 +6,7 @@ class RetrievalService:
     def retrieve(
         self,
         query: str,
-        project_id: str,
+        # project_id: str,
         top_k: int = 20,
     ):
 
@@ -39,8 +39,8 @@ class RetrievalService:
             item = container.ai_container.metadata[idx]
 
             # Filter by Project
-            if item["project_id"] != project_id:
-                continue
+            # if item["project_id"] != project_id:
+            #     continue
 
             faiss_results.append(item)
 
@@ -55,8 +55,8 @@ class RetrievalService:
 
         for item in bm25:
 
-            if item["project_id"] != project_id:
-                continue
+            # if item["project_id"] != project_id:
+            #     continue
 
             bm25_results.append(item)
 

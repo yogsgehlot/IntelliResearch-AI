@@ -22,7 +22,7 @@ class RAGService:
 
     def ask(
         self,
-        project_id: str,
+        # project_id: str,
         session_id: str,
         question: str,
     ):
@@ -41,7 +41,7 @@ class RAGService:
 
         documents = self.retriever.retrieve(
             query=rewritten_question,
-            project_id=project_id,
+            # project_id=project_id,
             top_k=20,
         )
 
