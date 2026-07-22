@@ -25,6 +25,7 @@ class RAGService:
         # project_id: str,
         session_id: str,
         question: str,
+        document_id: str = None,
     ):
 
         history_items = memory.history(session_id)
@@ -42,6 +43,7 @@ class RAGService:
         documents = self.retriever.retrieve(
             query=rewritten_question,
             # project_id=project_id,
+            document_id=document_id,
             top_k=20,
         )
 

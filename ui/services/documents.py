@@ -13,13 +13,19 @@ class DocumentService:
                 file.name,
                 file,
                 file.type,
-            )
-        }
+                )
+            }
 
         return api.post(
             "/documents/upload",
             token=token,
             files=files,
+        )
+
+    def list(self, token):
+        return api.get(
+            "/documents",
+            token=token,
         )
 
 

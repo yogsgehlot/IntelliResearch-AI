@@ -558,5 +558,495 @@
         "language": "en",
         "tokens": 30,
         "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 0,
+        "content": "Week 6 RAG & Agentic AI AI Internship Training Program — Module 16 & 17 Learning Objectives By the end of this week, interns will be able to: • Understand how Retrieval-Augmented Generation (RAG) works. • Build semantic search applications using embeddings. • Store and retrieve embeddings using vector databases. • Understand AI Agents and Agentic AI workflows. • Build AI applications using FastAPI. • Develop production-ready AI systems using modern frameworks. • Create an intelligent Research As",
+        "language": "en",
+        "tokens": 78,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 1,
+        "content": ". • Develop production-ready AI systems using modern frameworks. • Create an intelligent Research Assistant capable of answering questions from documents. Module 16: Retrieval-Augmented Generation (RAG) Introduction Large Language Models (LLMs) are powerful but have limitations: • Knowledge cutoff • Hallucinations • Cannot access private documents • Limited factual accuracy without external knowledge Retrieval-Augmented Generation (RAG) solves these problems by retrieving relevant information fr",
+        "language": "en",
+        "tokens": 64,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 2,
+        "content": "dge Retrieval-Augmented Generation (RAG) solves these problems by retrieving relevant information from external documents before generating a response. Instead of relying only on the model's internal knowledge, RAG allows the model to answer questions using your own data. RAG Pipeline User Query | v Embedding Model | v Vector Database | Retrieve Relevant Chunks | v LLM | v Final Response Topics 1. Embeddings Embeddings convert text into numerical vectors. Instead of storing words directly, AI st",
+        "language": "en",
+        "tokens": 77,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 3,
+        "content": " Embeddings Embeddings convert text into numerical vectors. Instead of storing words directly, AI stores their meaning in multidimensional space. Dog -> [0.21, -0.44, 0.83, ...] Similar meanings produce similar vectors, for example King, Queen, Prince, and Princess will be located close together in vector space. Generating an embedding in Python is one line of code once a model is loaded. Below, the sentence- transformers library turns two sentences into vectors, then cosine similarity tells us ",
+        "language": "en",
+        "tokens": 75,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 4,
+        "content": "he sentence- transformers library turns two sentences into vectors, then cosine similarity tells us how close they are in meaning. from sentence_transformers import SentenceTransformer, util model = SentenceTransformer(\"all-MiniLM-L6-v2\") sentence1 = \"The dog is playing in the park.\" sentence2 = \"A puppy is running outside.\" emb1 = model.encode(sentence1, convert_to_tensor=True) emb2 = model.encode(sentence2, convert_to_tensor=True) similarity = util.cos_sim(emb1, emb2) print(\"Similarity score:\"",
+        "language": "en",
+        "tokens": 58,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 5,
+        "content": "e(sentence2, convert_to_tensor=True) similarity = util.cos_sim(emb1, emb2) print(\"Similarity score:\", similarity.item()) # Output close to 1.0 = very similar meaning Why Embeddings? • Semantic understanding • Similarity search • Recommendation systems • Document retrieval • Question answering Popular Embedding Models • sentence-transformers • all-MiniLM-L6-v2 • BAAI BGE • OpenAI Embeddings • Gemini Embeddings • E5 Embeddings 2. Chunking Strategies LLMs cannot process extremely large documents ef",
+        "language": "en",
+        "tokens": 64,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 6,
+        "content": "i Embeddings • E5 Embeddings 2. Chunking Strategies LLMs cannot process extremely large documents efficiently. Therefore documents are split into chunks: PDF -> Page 1 -> Paragraphs -> Chunks -> Embeddings Chunking Methods Fixed Size Chunking Splits text into equal-length pieces, e.g. 500 characters per chunk. • Pros: Easy, Fast • Cons: Breaks context Recursive Chunking Splits based on paragraph, sentence, and words — maintains better context. Semantic Chunking Uses AI to split by meaning. Most ",
+        "language": "en",
+        "tokens": 76,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 7,
+        "content": "sentence, and words — maintains better context. Semantic Chunking Uses AI to split by meaning. Most accurate approach. Below is a practical example of Recursive Chunking using LangChain's text splitter. It tries to split on paragraphs first, then sentences, then words, so meaning stays intact as much as possible. from langchain.text_splitter import RecursiveCharacterTextSplitter text = open(\"document.txt\").read() splitter = RecursiveCharacterTextSplitter( chunk_size=600, # target size per chunk ",
+        "language": "en",
+        "tokens": 65,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 8,
+        "content": "ent.txt\").read() splitter = RecursiveCharacterTextSplitter( chunk_size=600, # target size per chunk (characters/tokens) chunk_overlap=100, # overlap keeps context between chunks separators=[\"\\n\\n\", \"\\n\", \". \", \" \", \"\"] ) chunks = splitter.split_text(text) print(f\"Document split into {len(chunks)} chunks\") print(chunks[0]) Best Practices • Chunk Size: 400–800 tokens • Overlap: 50–150 tokens • Preserve headings • Avoid splitting tables 3. Vector Databases A Vector Database stores embeddings instea",
+        "language": "en",
+        "tokens": 62,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 9,
+        "content": "rve headings • Avoid splitting tables 3. Vector Databases A Vector Database stores embeddings instead of plain text. Instead of searching keywords, it searches meaning. Traditional (SQL) Search: SQL WHERE name LIKE '%AI%' Semantic Search: \"What is Artificial Intelligence?\" Finds: Machine Intelligence AI Systems Deep Learning Popular Vector Databases • FAISS • ChromaDB • Pinecone • Weaviate • Milvus • Qdrant A minimal FAISS example: build an index from a list of text chunks, then search it with a",
+        "language": "en",
+        "tokens": 79,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 10,
+        "content": "s • Qdrant A minimal FAISS example: build an index from a list of text chunks, then search it with a query. import faiss import numpy as np from sentence_transformers import SentenceTransformer model = SentenceTransformer(\"all-MiniLM-L6-v2\") chunks = [\"AI is transforming healthcare.\", \"Cats are popular pets.\", \"Deep learning powers modern AI.\"] # Encode chunks into vectors and build an index vectors = model.encode(chunks) dimension = vectors.shape[1] index = faiss.IndexFlatL2(dimension) index.ad",
+        "language": "en",
+        "tokens": 69,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 11,
+        "content": "rs = model.encode(chunks) dimension = vectors.shape[1] index = faiss.IndexFlatL2(dimension) index.add(np.array(vectors)) # Search with a new query query = \"How is AI used in medicine?\" query_vector = model.encode([query]) distances, indices = index.search(np.array(query_vector), k=2) for i in indices[0]: print(chunks[i]) 4. Semantic Search Semantic Search understands the meaning behind a query, matching by intent rather than exact words. Query: How do neural networks learn? Document: Backpropaga",
+        "language": "en",
+        "tokens": 63,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 12,
+        "content": "tching by intent rather than exact words. Query: How do neural networks learn? Document: Backpropagation updates weights using gradients. Keyword Search -> No Match Semantic Search -> Match Found A full semantic search function that embeds the query, searches the vector database, and returns the closest matching chunks: def semantic_search(query, index, chunks, model, top_k=3): query_vector = model.encode([query]) distances, indices = index.search(query_vector, top_k) results = [chunks[i] for i ",
+        "language": "en",
+        "tokens": 67,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 13,
+        "content": "l.encode([query]) distances, indices = index.search(query_vector, top_k) results = [chunks[i] for i in indices[0]] return results top_matches = semantic_search(\"How do neural networks learn?\", index, chunks, model) print(top_matches) 5. Hybrid Search Hybrid Search combines Keyword Search (BM25) and Semantic Search (Embeddings), resulting in higher accuracy: Final Score = 0.5 x Keyword Score + 0.5 x Semantic Score Example combining BM25 keyword scores with embedding similarity scores: from rank_b",
+        "language": "en",
+        "tokens": 66,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 14,
+        "content": "x Semantic Score Example combining BM25 keyword scores with embedding similarity scores: from rank_bm25 import BM25Okapi tokenized_chunks = [c.split() for c in chunks] bm25 = BM25Okapi(tokenized_chunks) def hybrid_search(query, alpha=0.5, top_k=3): # Keyword score bm25_scores = bm25.get_scores(query.split()) # Semantic score (cosine similarity) query_vec = model.encode(query) semantic_scores = [ util.cos_sim(query_vec, model.encode(c)).item() for c in chunks ] # Combine both scores final_scores ",
+        "language": "en",
+        "tokens": 59,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 15,
+        "content": "til.cos_sim(query_vec, model.encode(c)).item() for c in chunks ] # Combine both scores final_scores = [ alpha * bm25_scores[i] + (1 - alpha) * semantic_scores[i] for i in range(len(chunks)) ] ranked = sorted(zip(chunks, final_scores), key=lambda x: x[1], reverse=True) return ranked[:top_k] 6. Reranking Initial retrieval may return irrelevant documents. A Reranker sorts retrieved results based on relevance. Retrieve Top 20 | v Reranker | v Top 5 | v LLM Popular Models: • BGE Reranker • Cross Enco",
+        "language": "en",
+        "tokens": 75,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 16,
+        "content": "elevance. Retrieve Top 20 | v Reranker | v Top 5 | v LLM Popular Models: • BGE Reranker • Cross Encoder • Cohere Rerank Reranking the top 20 retrieved chunks down to the best 5 using a Cross Encoder: from sentence_transformers import CrossEncoder reranker = CrossEncoder(\"cross-encoder/ms-marco-MiniLM-L-6-v2\") pairs = [[query, chunk] for chunk in retrieved_top_20] scores = reranker.predict(pairs) reranked = sorted(zip(retrieved_top_20, scores), key=lambda x: x[1], reverse=True) top_5 = [chunk for",
+        "language": "en",
+        "tokens": 70,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 17,
+        "content": "eranked = sorted(zip(retrieved_top_20, scores), key=lambda x: x[1], reverse=True) top_5 = [chunk for chunk, score in reranked[:5]] Practical Tools FAISS (Facebook AI Similarity Search) Features: • Extremely Fast • Local Database • Lightweight • Ideal for prototypes Operations: • Create Index • Store Embeddings • Similarity Search Saving and loading a FAISS index to disk so it persists between application runs: # Save index faiss.write_index(index, \"my_index.faiss\") # Load index later index = fai",
+        "language": "en",
+        "tokens": 72,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 18,
+        "content": "ication runs: # Save index faiss.write_index(index, \"my_index.faiss\") # Load index later index = faiss.read_index(\"my_index.faiss\") ChromaDB Open-source Vector Database Features: • Easy to use • Metadata filtering • Persistent storage • LangChain Integration Common Operations: • Create Collection • Add Documents • Search • Delete • Update A full ChromaDB example — create a persistent collection, add documents with metadata, and query it: import chromadb client = chromadb.PersistentClient(path=\".",
+        "language": "en",
+        "tokens": 67,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 19,
+        "content": "dd documents with metadata, and query it: import chromadb client = chromadb.PersistentClient(path=\"./chroma_db\") collection = client.get_or_create_collection(name=\"documents\") # Add documents (Chroma can auto-embed, or you can pass your own vectors) collection.add( documents=[\"AI is transforming healthcare.\", \"Cats are popular pets.\"], metadatas=[{\"source\": \"doc1.pdf\"}, {\"source\": \"doc2.pdf\"}], ids=[\"id1\", \"id2\"] ) # Query the collection results = collection.query( query_texts=[\"How is AI used i",
+        "language": "en",
+        "tokens": 56,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 20,
+        "content": "s=[\"id1\", \"id2\"] ) # Query the collection results = collection.query( query_texts=[\"How is AI used in medicine?\"], n_results=2 ) print(results[\"documents\"]) # Update or delete collection.update(ids=[\"id1\"], documents=[\"Updated text about AI.\"]) collection.delete(ids=[\"id2\"]) Module 17: Agentic AI Concepts & Applications What is Agentic AI? Traditional LLM: Question -> Answer Agentic AI: Question -> Reason -> Plan -> Use Tools -> Execute -> Final Answer AI Agents can think, plan, use tools, remem",
+        "language": "en",
+        "tokens": 68,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 21,
+        "content": "> Reason -> Plan -> Use Tools -> Execute -> Final Answer AI Agents can think, plan, use tools, remember information, and complete tasks autonomously. Topics 1. What is an AI Agent? An AI Agent is a system that: • Understands goals • Plans tasks • Makes decisions • Uses external tools • Learns from previous interactions • Produces intelligent responses Agent Workflow Goal-> Planning -> Tool Selection -> Execution -> Observation -> Next Action -> Completion 2. Tool Calling Agents become powerful b",
+        "language": "en",
+        "tokens": 84,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 22,
+        "content": "on -> Execution -> Observation -> Next Action -> Completion 2. Tool Calling Agents become powerful by interacting with external tools, for example: • Search API • Calculator • Weather API • PDF Reader • Database • Email Sender • Python Code Executor Example Workflow: User -> Search Tool -> Retrieved Data -> LLM ->Answer A simple tool-calling agent using LangChain — the model decides on its own whether to use the calculator tool: from langchain.agents import initialize_agent, Tool, AgentType from",
+        "language": "en",
+        "tokens": 81,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 23,
+        "content": "ther to use the calculator tool: from langchain.agents import initialize_agent, Tool, AgentType from langchain.chat_models import ChatOpenAI def calculator(expression: str) -> str: return str(eval(expression)) tools = [ Tool( name=\"Calculator\", func=calculator, description=\"Use this to do math calculations.\" ) ] llm = ChatOpenAI(model=\"gpt-4o-mini\", temperature=0) agent = initialize_agent(tools, llm, agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION) response = agent.run(\"What is 245 multiplied by 12,",
+        "language": "en",
+        "tokens": 54,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 24,
+        "content": "lm, agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION) response = agent.run(\"What is 245 multiplied by 12, plus 30?\") print(response) 3. Memory Systems Agents remember previous interactions. Short-Term Memory Current conversation. Long-Term Memory Stored information across sessions. Vector Memory Stores previous conversations as embeddings. Example of adding short-term conversation memory with LangChain, so the agent remembers earlier turns: from langchain.memory import ConversationBufferMemory from l",
+        "language": "en",
+        "tokens": 57,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 25,
+        "content": ", so the agent remembers earlier turns: from langchain.memory import ConversationBufferMemory from langchain.chains import ConversationChain memory = ConversationBufferMemory() conversation = ConversationChain(llm=llm, memory=memory) conversation.predict(input=\"My name is Aditya.\") conversation.predict(input=\"What is my name?\") # -> \"Your name is Aditya.\" (remembered from earlier turn) Benefits: • Personalized responses • Better context • Multi-step reasoning 4. Planning & Reasoning Instead of d",
+        "language": "en",
+        "tokens": 57,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 26,
+        "content": " Personalized responses • Better context • Multi-step reasoning 4. Planning & Reasoning Instead of directly answering, the agent creates a plan. Goal: Research AI in Healthcare Search papers -> Summarize -> Compare -> Generate Report 5. Multi-Agent Systems Multiple agents collaborate together. Coordinator Agent |-- Research Agent |-- Writing Agent |-- Citation Agent +-- Review Agent Advantages: • Parallel execution • Modular design • Better scalability • Improved accuracy A simplified LangGraph-",
+        "language": "en",
+        "tokens": 72,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 27,
+        "content": "Parallel execution • Modular design • Better scalability • Improved accuracy A simplified LangGraph-style multi-agent setup where a coordinator routes work to a research agent and a writing agent: from langgraph.graph import StateGraph, END def research_agent(state): state[\"research\"] = search_papers(state[\"topic\"]) return state def writing_agent(state): state[\"report\"] = summarize(state[\"research\"]) return state graph = StateGraph(dict) graph.add_node(\"research\", research_agent) graph.add_node(",
+        "language": "en",
+        "tokens": 54,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 28,
+        "content": "\"]) return state graph = StateGraph(dict) graph.add_node(\"research\", research_agent) graph.add_node(\"write\", writing_agent) graph.set_entry_point(\"research\") graph.add_edge(\"research\", \"write\") graph.add_edge(\"write\", END) app = graph.compile() result = app.invoke({\"topic\": \"AI in Healthcare\"}) print(result[\"report\"]) Frameworks LangChain Popular framework for building LLM applications. Features: • Prompt Templates • Chains • Memory • Tool Calling • Agents • RAG • Document Loaders • Output Parse",
+        "language": "en",
+        "tokens": 54,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 29,
+        "content": "• Prompt Templates • Chains • Memory • Tool Calling • Agents • RAG • Document Loaders • Output Parsers Use Cases: • Chatbots • RAG • AI Assistants • Automation LangGraph Designed for complex AI workflows. Features: • Stateful Agents • Graph-based execution • Human-in-the-loop • Multi-agent systems • Cyclic workflows Ideal for: • Research Assistants • AI Workflows • Enterprise Agents LlamaIndex Framework specialized for document understanding. Features: • Document Parsing • Data Connectors • Inde",
+        "language": "en",
+        "tokens": 78,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 30,
+        "content": "mework specialized for document understanding. Features: • Document Parsing • Data Connectors • Indexing • Retrieval • RAG Pipelines Supported Data: • PDF • DOCX • CSV • SQL • APIs • Websites AI Application Development APIs • REST APIs • HTTP Methods (GET, POST, PUT, DELETE) • Request & Response • JSON • Status Codes • Authentication Basics FastAPI Basics FastAPI is a modern Python web framework used to build the backend of AI applications. It is fast, type- safe, and automatically generates int",
+        "language": "en",
+        "tokens": 85,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 31,
+        "content": "sed to build the backend of AI applications. It is fast, type- safe, and automatically generates interactive API documentation. Core concepts: • Project Structure • Path Parameters • Query Parameters • Request Body • Response Models • Dependency Injection • File Upload • Error Handling • API Documentation (Swagger/OpenAPI) A minimal FastAPI app showing path parameters, query parameters, and a request body: from fastapi import FastAPI from pydantic import BaseModel app = FastAPI() # Path paramete",
+        "language": "en",
+        "tokens": 76,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 32,
+        "content": "est body: from fastapi import FastAPI from pydantic import BaseModel app = FastAPI() # Path parameter @app.get(\"/items/{item_id}\") def get_item(item_id: int): return {\"item_id\": item_id} # Query parameter @app.get(\"/search\") def search(q: str, limit: int = 5): return {\"query\": q, \"limit\": limit} # Request body using a Pydantic model class Question(BaseModel): text: str top_k: int = 3 @app.post(\"/ask\") def ask(question: Question): return {\"answer\": f\"You asked: {question.text}\"} File upload and e",
+        "language": "en",
+        "tokens": 67,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 33,
+        "content": "sk\") def ask(question: Question): return {\"answer\": f\"You asked: {question.text}\"} File upload and error handling are essential for a document-based AI app: from fastapi import FastAPI, UploadFile, File, HTTPException app = FastAPI() @app.post(\"/upload\") async def upload_pdf(file: UploadFile = File(...)): if not file.filename.endswith(\".pdf\"): raise HTTPException(status_code=400, detail=\"Only PDF files are allowed\") contents = await file.read() with open(f\"uploads/{file.filename}\", \"wb\") as f: f",
+        "language": "en",
+        "tokens": 58,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 34,
+        "content": "files are allowed\") contents = await file.read() with open(f\"uploads/{file.filename}\", \"wb\") as f: f.write(contents) return {\"filename\": file.filename, \"status\": \"uploaded\"} Run the app with Uvicorn, and Swagger docs appear automatically at /docs: uvicorn main:app --reload # Swagger UI: http://127.0.0.1:8000/docs Vector Databases (Practical Implementation) Using FAISS or ChromaDB Operations: • Store embeddings, Retrieve similar documents • Update index, Delete documents Wiring a vector database ",
+        "language": "en",
+        "tokens": 61,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 35,
+        "content": "re embeddings, Retrieve similar documents • Update index, Delete documents Wiring a vector database into a FastAPI endpoint so users can search documents over HTTP: from fastapi import FastAPI from pydantic import BaseModel from sentence_transformers import SentenceTransformer import faiss import numpy as np app = FastAPI() model = SentenceTransformer(\"all-MiniLM-L6-v2\") index = faiss.IndexFlatL2(384) stored_chunks = [] class SearchRequest(BaseModel): query: str top_k: int = 3 @app.post(\"/search",
+        "language": "en",
+        "tokens": 64,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 36,
+        "content": "384) stored_chunks = [] class SearchRequest(BaseModel): query: str top_k: int = 3 @app.post(\"/search\") def search(req: SearchRequest): query_vector = model.encode([req.query]) distances, indices = index.search(np.array(query_vector), req.top_k) results = [stored_chunks[i] for i in indices[0] if i < len(stored_chunks)] return {\"results\": results} AI Application Architecture User | v Frontend (React/Next.js) | v FastAPI Backend | +--------+--------+ | | v v Embedding Model LLM Service | | v v Vect",
+        "language": "en",
+        "tokens": 65,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 37,
+        "content": "/Next.js) | v FastAPI Backend | +--------+--------+ | | v v Embedding Model LLM Service | | v v Vector Database Response Generation | v Document Storage Project Assignment 1: AI Document Search API Objective: Build a FastAPI application that allows users to upload PDF documents and perform semantic search using embeddings and a vector database. Features • Upload PDF documents, Extract text from PDFs • Generate embeddings, Store embeddings in FAISS or ChromaDB • Search documents using natural lan",
+        "language": "en",
+        "tokens": 80,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 38,
+        "content": "Fs • Generate embeddings, Store embeddings in FAISS or ChromaDB • Search documents using natural language queries • Return the most relevant document chunks through a FastAPI API Tech Stack • Backend: FastAPI • Embedding Model: all-MiniLM-L6-v2 • Vector Database: FAISS or ChromaDB • Document Parser: PyPDF Deliverables • Working FastAPI application, Semantic search functionality Project Assignment 2: AI Research Assistant API Objective: Build a simple AI assistant using FastAPI that can answer qu",
+        "language": "en",
+        "tokens": 74,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 39,
+        "content": "2: AI Research Assistant API Objective: Build a simple AI assistant using FastAPI that can answer questions, summarize text, and maintain conversation history. Features • FastAPI REST API • Ask questions from uploaded text or documents • Generate text summaries • Maintain chat history (memory) • Use LangChain or LangGraph for tool calling • Return AI-generated responses with source references Tech Stack • Backend: FastAPI • Framework: LangChain or LangGraph • LLM: Gemma / Gemini API • Embedding ",
+        "language": "en",
+        "tokens": 78,
+        "project_id": "None"
+    },
+    {
+        "document_id": "e4a98c35-c42e-4ea8-b8e1-df24ab962633",
+        "document_name": "Week6_RAG_Agentic_AI.pdf",
+        "page": null,
+        "chunk_index": 40,
+        "content": " Stack • Backend: FastAPI • Framework: LangChain or LangGraph • LLM: Gemma / Gemini API • Embedding Model: all-MiniLM-L6-v2 (optional) Deliverables • Working AI Assistant API • API documentation (Swagger/OpenAPI)",
+        "language": "en",
+        "tokens": 30,
+        "project_id": "None"
+    },
+    {
+        "document_id": "36425c2c-6ff8-4582-8384-a2468e30f569",
+        "document_name": "AI_Internsheep_Plan.pdf",
+        "page": null,
+        "chunk_index": 0,
+        "content": "Basic AI Internship Program (45 Days) Program Overview Duration 45 Days (7 Weeks) Focus Area AI Basics Reporting Frequency Weekly (every Monday) + Mid-week check-in (every Friday) Reporting Format Written progress report + 15-minute video/in-person sync Final Deliverable Fully functional AI project (as assigned) with Documentation & Presentation Evaluation Weekly reports (30%) + Code quality (40%) + Final project (30%) Reporting Structure Interns are required to report progress twice per week us",
+        "language": "en",
+        "tokens": 72,
+        "project_id": null
+    },
+    {
+        "document_id": "36425c2c-6ff8-4582-8384-a2468e30f569",
+        "document_name": "AI_Internsheep_Plan.pdf",
+        "page": null,
+        "chunk_index": 1,
+        "content": " + Final project (30%) Reporting Structure Interns are required to report progress twice per week using the schedule below. Consistent reporting is mandatory and factors into the final evaluation. Day Report Type Contents Required Monday Weekly Progress Report Tasks completed last week, blockers faced, plan for the week ahead Friday Mid-Week Check-In Current progress on weekly plan, any new blockers, code snippet/screenshot Report Template (Monday)  What I completed last week (with links to cod",
+        "language": "en",
+        "tokens": 75,
+        "project_id": null
+    },
+    {
+        "document_id": "36425c2c-6ff8-4582-8384-a2468e30f569",
+        "document_name": "AI_Internsheep_Plan.pdf",
+        "page": null,
+        "chunk_index": 2,
+        "content": "rs, code snippet/screenshot Report Template (Monday)  What I completed last week (with links to code/commits)  What I struggled with or got stuck on  What I plan to accomplish this week  Any questions or support needed Week 1: Introduction to AI & Python Fundamentals Topics • What is AI, ML, Deep Learning, and Generative AI? • AI applications and use cases • Python basics • Data structures and functions • Google Colab setup Hands-on • Python exercises • Build a simple calculator and text-pro",
+        "language": "en",
+        "tokens": 87,
+        "project_id": null
+    },
+    {
+        "document_id": "36425c2c-6ff8-4582-8384-a2468e30f569",
+        "document_name": "AI_Internsheep_Plan.pdf",
+        "page": null,
+        "chunk_index": 3,
+        "content": " functions • Google Colab setup Hands-on • Python exercises • Build a simple calculator and text-processing scripts Deliverable • Python Fundamentals Assessment Week 2: Data Analysis & Visualization Topics • NumPy • Pandas • Data cleaning • Data visualization with Matplotlib Hands-on • Analyze a sample dataset • Create charts and dashboards Deliverable • Exploratory Data Analysis (EDA) Report Week 3: Machine Learning Fundamentals Topics • Supervised vs Unsupervised Learning • Training, validatio",
+        "language": "en",
+        "tokens": 73,
+        "project_id": null
+    },
+    {
+        "document_id": "36425c2c-6ff8-4582-8384-a2468e30f569",
+        "document_name": "AI_Internsheep_Plan.pdf",
+        "page": null,
+        "chunk_index": 4,
+        "content": " 3: Machine Learning Fundamentals Topics • Supervised vs Unsupervised Learning • Training, validation, and testing • Regression and Classification • Feature engineering basics Hands-on • House Price Prediction • Student Performance Prediction Tools • Scikit-learn Deliverable • ML Model Development Report Week 4: Deep Learning Basics Topics • Neural Networks • Forward & Backpropagation • TensorFlow/PyTorch basics Hands-on • Image Classification on MNIST Deliverable • Deep Learning Mini Project We",
+        "language": "en",
+        "tokens": 70,
+        "project_id": null
+    },
+    {
+        "document_id": "36425c2c-6ff8-4582-8384-a2468e30f569",
+        "document_name": "AI_Internsheep_Plan.pdf",
+        "page": null,
+        "chunk_index": 5,
+        "content": "/PyTorch basics Hands-on • Image Classification on MNIST Deliverable • Deep Learning Mini Project Week 5: Generative AI & LLMs Topics • Introduction to LLMs • Prompt Engineering • Retrieval-Augmented Generation (RAG) • Open-source models (Gemma, Llama, Mistral) Hands-on • Build a document Q&A chatbot Deliverable • AI Chatbot Prototype Week 6: AI Application Development Topics • APIs • FastAPI basics • Vector Databases • AI Application Architecture Hands-on • Build an AI-powered document summariz",
+        "language": "en",
+        "tokens": 75,
+        "project_id": null
+    },
+    {
+        "document_id": "36425c2c-6ff8-4582-8384-a2468e30f569",
+        "document_name": "AI_Internsheep_Plan.pdf",
+        "page": null,
+        "chunk_index": 6,
+        "content": "cs • Vector Databases • AI Application Architecture Hands-on • Build an AI-powered document summarizer Deliverable • Working AI Application Week 7: Capstone Project Project Options • Resume Screening System • Customer Support Chatbot • Smart Knowledge Base • AI Meeting Notes Generator Final Deliverables • Source Code Repository • Project Documentation • Presentation Deck • Live Demo Recommended Tech Stack • Python • Google Colab • NumPy • Pandas • Scikit-learn • TensorFlow or PyTorch • FastAPI •",
+        "language": "en",
+        "tokens": 79,
+        "project_id": null
+    },
+    {
+        "document_id": "36425c2c-6ff8-4582-8384-a2468e30f569",
+        "document_name": "AI_Internsheep_Plan.pdf",
+        "page": null,
+        "chunk_index": 7,
+        "content": "ch Stack • Python • Google Colab • NumPy • Pandas • Scikit-learn • TensorFlow or PyTorch • FastAPI • Git / GitHub Expected Outcomes By the end of the internship, interns should be able to: • Understand core AI/ML concepts. • Build and evaluate machine learning models. • Develop simple Generative AI applications. • Work with LLMs and RAG systems. • Present and document AI solutions professionally.",
+        "language": "en",
+        "tokens": 68,
+        "project_id": null
     }
 ]

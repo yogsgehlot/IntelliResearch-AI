@@ -7,6 +7,7 @@ class RetrievalService:
         self,
         query: str,
         # project_id: str,
+        document_id: str = None,
         top_k: int = 20,
     ):
 
@@ -14,6 +15,9 @@ class RetrievalService:
             raise RuntimeError(
                 "AI Container not initialized."
             )
+
+        # If filtering by a single document, increase search depth to find matches
+        search_k = 1000 if document_id else top_k
 
         # ---------- Dense Retrieval (FAISS) ----------
 
@@ -23,7 +27,7 @@ class RetrievalService:
 
         scores, ids = container.ai_container.faiss.search(
             vector.reshape(1, -1),
-            top_k,
+            search_k,
         )
 
         faiss_results = []
@@ -38,6 +42,10 @@ class RetrievalService:
 
             item = container.ai_container.metadata[idx]
 
+            # Filter by Document
+            if document_id and item.get("document_id") != str(document_id):
+                continue
+
             # Filter by Project
             # if item["project_id"] != project_id:
             #     continue
@@ -48,12 +56,16 @@ class RetrievalService:
 
         bm25 = container.ai_container.bm25.search(
             query,
-            top_k * 2,
+            search_k * 2,
         )
 
         bm25_results = []
 
         for item in bm25:
+
+            # Filter by Document
+            if document_id and item.get("document_id") != str(document_id):
+                continue
 
             # if item["project_id"] != project_id:
             #     continue
@@ -75,4 +87,4 @@ class RetrievalService:
 
             unique[key] = item
 
-        return list(unique.values())
+        return list(unique.values())[:top_k]

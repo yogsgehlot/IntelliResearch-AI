@@ -1,4 +1,4 @@
-from fastapi import UploadFile
+from fastapi import UploadFile, BackgroundTasks
 from sqlalchemy.orm import Session
 from app.ai.processor import DocumentProcessor
 from app.models.document import Document, DocumentStatus
@@ -8,7 +8,7 @@ from app.utils.file_utils import (generate_filename,validate_extension,)
 
 class DocumentService:
     @staticmethod
-    def upload(db: Session,user,file: UploadFile,):
+    def upload(db: Session, user, file: UploadFile, background_tasks: BackgroundTasks):
         extension = validate_extension(file.filename)
         filename = generate_filename(file.filename)
         storage_path = storage.save(file,filename,)
@@ -24,5 +24,5 @@ class DocumentService:
         )
 
         document = DocumentRepository.create(db,document,)
-        DocumentProcessor.process(db,document,)
+        background_tasks.add_task(DocumentProcessor.process, document.id)
         return document

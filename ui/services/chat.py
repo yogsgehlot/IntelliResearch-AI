@@ -6,17 +6,19 @@ class ChatService:
     def ask(
         self,
         token,
-        # project_id,
         question,
+        document_id=None,
     ):
-        print(api.post("/chat",token=token,data={"question": question,},))
+        data = {
+            "question": question,
+        }
+        if document_id:
+            data["document_id"] = str(document_id)
+            
         return api.post(
             "/chat",
             token=token,
-            data={
-                # "project_id": project_id,
-                "question": question,
-            },
+            data=data,
         )
 
 

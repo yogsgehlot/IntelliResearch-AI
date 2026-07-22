@@ -16,6 +16,8 @@ from views.projects import render as projects_page
 from views.upload import render as upload_page
 from views.chat import render as chat_page
 from views.notes import render as notes_page
+from views.summary import render as summary_page
+from views.settings import render as settings_page
 
 init_session()
 
@@ -51,7 +53,7 @@ elif page == "Chat":
 
 elif page == "Summary":
 
-    st.header("Summary")
+    summary_page()
 
 elif page == "Notes":
 
@@ -59,4 +61,4 @@ elif page == "Notes":
 
 elif page == "Settings":
 
-    st.header("Settings")
+    settings_page()
