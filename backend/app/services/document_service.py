@@ -8,7 +8,7 @@ from app.utils.file_utils import (generate_filename,validate_extension,)
 
 class DocumentService:
     @staticmethod
-    def upload(db: Session, user, file: UploadFile, background_tasks: BackgroundTasks):
+    def upload(db: Session, user, file: UploadFile, background_tasks: BackgroundTasks, project_id=None):
         extension = validate_extension(file.filename)
         filename = generate_filename(file.filename)
         storage_path = storage.save(file,filename,)
@@ -21,6 +21,7 @@ class DocumentService:
             file_size=file.size,
             storage_path=storage_path,
             status=DocumentStatus.PROCESSING,
+            project_id=project_id,
         )
 
         document = DocumentRepository.create(db,document,)

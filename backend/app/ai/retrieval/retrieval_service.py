@@ -6,7 +6,7 @@ class RetrievalService:
     def retrieve(
         self,
         query: str,
-        # project_id: str,
+        project_id: str = None,
         document_id: str = None,
         top_k: int = 20,
     ):
@@ -47,8 +47,8 @@ class RetrievalService:
                 continue
 
             # Filter by Project
-            # if item["project_id"] != project_id:
-            #     continue
+            if project_id and item.get("project_id") != str(project_id):
+                continue
 
             faiss_results.append(item)
 
@@ -67,8 +67,9 @@ class RetrievalService:
             if document_id and item.get("document_id") != str(document_id):
                 continue
 
-            # if item["project_id"] != project_id:
-            #     continue
+            # Filter by Project
+            if project_id and item.get("project_id") != str(project_id):
+                continue
 
             bm25_results.append(item)
 

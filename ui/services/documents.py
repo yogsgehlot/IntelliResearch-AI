@@ -7,6 +7,7 @@ class DocumentService:
         self,
         token,
         file,
+        project_id=None,
     ):
         files = {
             "file": (
@@ -16,8 +17,12 @@ class DocumentService:
                 )
             }
 
+        url = "/documents/upload"
+        if project_id:
+            url += f"?project_id={project_id}"
+
         return api.post(
-            "/documents/upload",
+            url,
             token=token,
             files=files,
         )

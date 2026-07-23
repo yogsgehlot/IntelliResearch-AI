@@ -17,6 +17,7 @@ class NotesService:
         self,
         token,
         project_id,
+        title,
         content,
     ):
         return api.post(
@@ -24,6 +25,7 @@ class NotesService:
             token=token,
             data={
                 "project_id": project_id,
+                "title": title,
                 "content": content,
             },
         )

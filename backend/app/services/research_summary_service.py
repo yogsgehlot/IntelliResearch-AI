@@ -119,10 +119,18 @@ class ResearchSummaryService:
                 detail="Project not found",
             )
 
-        return ResearchSummaryRepository.get_by_project(
+        summary = ResearchSummaryRepository.get_by_project(
             db,
             project_id,
         )
+
+        if summary is None:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Summary not found",
+            )
+
+        return summary
 
     @staticmethod
     def delete(

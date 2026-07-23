@@ -2,7 +2,13 @@ import streamlit as st
 from services.documents import document_service
 
 def render():
-    st.title("📄 Upload Research Papers")
+    if not st.session_state.get("project"):
+        st.title("📄 Upload Research Papers")
+        st.warning("⚠️ Please select a project from the **Projects** page before uploading documents.")
+        return
+
+    project = st.session_state.project
+    st.title(f"📄 Upload Research Papers for: {project['name']}")
 
     uploaded_files = st.file_uploader(
         "Choose files",
@@ -30,6 +36,7 @@ def render():
                     response = document_service.upload(
                         st.session_state.token,
                         file,
+                        project_id=project["id"],
                     )
                     if response.status_code in [200, 201]:
                         st.success(f"✅ {file.name}")
@@ -46,8 +53,10 @@ def render():
         response = document_service.list(st.session_state.token)
         if response.status_code == 200:
             docs = response.json()
+            # Filter by active project
+            docs = [doc for doc in docs if doc.get("project_id") == project["id"]]
             if not docs:
-                st.info("No documents uploaded yet.")
+                st.info("No documents uploaded yet for this project.")
             else:
                 for doc in docs:
                     with st.container(border=True):

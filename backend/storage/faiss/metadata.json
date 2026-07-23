@@ -1088,5 +1088,85 @@
         "language": "en",
         "tokens": 24,
         "project_id": null
+    },
+    {
+        "document_id": "68ec0a65-963a-40e1-bcba-ab58d56d4657",
+        "document_name": "SWE_Resume_Template.pdf",
+        "page": null,
+        "chunk_index": 0,
+        "content": "YOGESH GEHLOT  7023795881 # theyogsoﬃcial@gmail.com ï linkedin § Github  Twitter Education Chandigarh University 2020-2024 Bachelor of Engineering (Hons.) in Computer Science (CGPA: 8.23 / 10.00) Mohali, Punjab Apex Public School, Jodhpur 2017-2018 Senior Secondary Education in Physics, Chemistry and Mathematics (Percentage: 85.00 / 100.00) Jodhpur, Rajasthan Technical Skills Languages: C++, JavaScript, TypeScript, Python, Java, ColdFusion Markup Language (CFML) Technologies & Framework: REACT",
+        "language": "en",
+        "tokens": 64,
+        "project_id": "ad811e68-b991-4a8a-839c-99d9907c13d8"
+    },
+    {
+        "document_id": "68ec0a65-963a-40e1-bcba-ab58d56d4657",
+        "document_name": "SWE_Resume_Template.pdf",
+        "page": null,
+        "chunk_index": 1,
+        "content": "aScript, TypeScript, Python, Java, ColdFusion Markup Language (CFML) Technologies & Framework: REACT, Node.Js, Express.Js, Next.Js, ColdBox, Tailwind CSS, JQuery, MySQL MongoDB Tools: Git, Github, Vercel, Figma(basic), Postman, VSCode Experience Software Engineer Trainee May 2025 – Present Lucid Outsourcing Solutions Jodhpur, India • Undergoing hands-on training in CFML (ColdFusion Markup Language) and the ColdBox MVC framework, a modern platform for building scalable and modular web application",
+        "language": "en",
+        "tokens": 65,
+        "project_id": "ad811e68-b991-4a8a-839c-99d9907c13d8"
+    },
+    {
+        "document_id": "68ec0a65-963a-40e1-bcba-ab58d56d4657",
+        "document_name": "SWE_Resume_Template.pdf",
+        "page": null,
+        "chunk_index": 2,
+        "content": ") and the ColdBox MVC framework, a modern platform for building scalable and modular web applications. • Learning the principles of server-side programming, MVC architecture, and enterprise-level application development using ColdFusion. • Technologies Used: CFML, ColdBox, Bootstrap Freelancer Jun 2024 – September 2024 ViksBlock Online • Gained experience in client communication, project management, and problem-solving in a real-world setting, Successfully delivered a project that met all client",
+        "language": "en",
+        "tokens": 67,
+        "project_id": "ad811e68-b991-4a8a-839c-99d9907c13d8"
+    },
+    {
+        "document_id": "68ec0a65-963a-40e1-bcba-ab58d56d4657",
+        "document_name": "SWE_Resume_Template.pdf",
+        "page": null,
+        "chunk_index": 3,
+        "content": "t, and problem-solving in a real-world setting, Successfully delivered a project that met all client speciﬁcations. • Technologies Used: ReactJS, Tailwind CSS, Daisy UI Projects React Blog Application with Appwrite Backend • Integrated Appwrite, an open-source backend server, for handling user authentication, database management, and ﬁle storage, ensuring secure and eﬃcient data management. • Implemented functionality for users to edit and update their existing blog posts, providing a seamless c",
+        "language": "en",
+        "tokens": 70,
+        "project_id": "ad811e68-b991-4a8a-839c-99d9907c13d8"
+    },
+    {
+        "document_id": "68ec0a65-963a-40e1-bcba-ab58d56d4657",
+        "document_name": "SWE_Resume_Template.pdf",
+        "page": null,
+        "chunk_index": 4,
+        "content": "emented functionality for users to edit and update their existing blog posts, providing a seamless content management experience. • Tech Stack: React.js, Redux, AppWrite, Tailwind CSS, JavaScript Mystry-Message-Nextjs • Developed a comprehensive real-time anonymous messaging web application using the Next.js framework, leveraging modern web technologies like shadcn library to provide a seamless and responsive user experience. • AI Integration: Incorporated AI-powered message suggestion feature t",
+        "language": "en",
+        "tokens": 65,
+        "project_id": "ad811e68-b991-4a8a-839c-99d9907c13d8"
+    },
+    {
+        "document_id": "68ec0a65-963a-40e1-bcba-ab58d56d4657",
+        "document_name": "SWE_Resume_Template.pdf",
+        "page": null,
+        "chunk_index": 5,
+        "content": "d responsive user experience. • AI Integration: Incorporated AI-powered message suggestion feature to provide users with intelligent message suggestions, enhancing user engagement and communication eﬃciency. • Developed email veriﬁcation processes using custom React components for email templates and integrated email sending functionality. • Tech Stack: Next.js, TypeScript, MongoDB, Shadcn, Resend, OpenAI Achievements Python Programming Certiﬁcation-Coursera Completed a comprehensive Python cour",
+        "language": "en",
+        "tokens": 60,
+        "project_id": "ad811e68-b991-4a8a-839c-99d9907c13d8"
+    },
+    {
+        "document_id": "68ec0a65-963a-40e1-bcba-ab58d56d4657",
+        "document_name": "SWE_Resume_Template.pdf",
+        "page": null,
+        "chunk_index": 6,
+        "content": ", OpenAI Achievements Python Programming Certiﬁcation-Coursera Completed a comprehensive Python course covering fundamental and advanced programming concepts. Full Stack Web Development Certiﬁcation- Internshala Gained practical knowledge and skills in full stack development, including frontend and backend technologies. LeetCode Problem Solving Solved 150 coding problems on LeetCode, enhancing problem-solving skills and algorithmic thinking.",
+        "language": "en",
+        "tokens": 52,
+        "project_id": "ad811e68-b991-4a8a-839c-99d9907c13d8"
+    },
+    {
+        "document_id": "68ec0a65-963a-40e1-bcba-ab58d56d4657",
+        "document_name": "SWE_Resume_Template.pdf",
+        "page": null,
+        "chunk_index": 7,
+        "content": "blem-solving skills and algorithmic thinking.",
+        "language": "en",
+        "tokens": 5,
+        "project_id": "ad811e68-b991-4a8a-839c-99d9907c13d8"
     }
 ]

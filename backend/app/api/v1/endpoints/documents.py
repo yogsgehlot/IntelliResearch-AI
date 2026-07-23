@@ -1,8 +1,10 @@
+from uuid import UUID
 from fastapi import APIRouter
 from fastapi import Depends
 from fastapi import UploadFile
 from fastapi import File
 from fastapi import BackgroundTasks
+from fastapi import HTTPException
 from sqlalchemy.orm import Session
 from app.api.deps import get_current_user
 from app.api.deps import get_db
@@ -25,14 +27,12 @@ def list_documents(
 @router.post("/upload",response_model=DocumentResponse,)
 def upload_document(
     file: UploadFile = File(...),
+    project_id: UUID | None = None,
     current_user=Depends(get_current_user),
     db: Session = Depends(get_db),
     background_tasks: BackgroundTasks = BackgroundTasks(),
 ):
-    return DocumentService.upload(db,current_user,file,background_tasks)
-
-from uuid import UUID
-from fastapi import HTTPException
+    return DocumentService.upload(db,current_user,file,background_tasks,project_id)
 
 @router.delete("/{document_id}")
 def delete_document(

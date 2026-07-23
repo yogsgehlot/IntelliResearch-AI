@@ -3,10 +3,25 @@ import streamlit as st
 
 
 def render_sidebar():
+    options = [
+        "Dashboard",
+        "Projects",
+        "Upload",
+        "Chat",
+        "Summary",
+        "Notes",
+        "Settings",
+    ]
+    
+    if "page" not in st.session_state:
+        st.session_state.page = "Dashboard"
+        
+    default_idx = 0
+    if st.session_state.page in options:
+        default_idx = options.index(st.session_state.page)
 
     with st.sidebar:
-
-        st.title("🧠 IntelliResearch AI")
+        st.title("🧠 IntelliResearch")
 
         if st.session_state.project:
             st.success(
@@ -17,15 +32,7 @@ def render_sidebar():
 
         selected = option_menu(
             menu_title=None,
-            options=[
-                "Dashboard",
-                "Projects",
-                "Upload",
-                "Chat",
-                "Summary",
-                "Notes",
-                "Settings",
-            ],
+            options=options,
             icons=[
                 "house",
                 "folder",
@@ -35,7 +42,8 @@ def render_sidebar():
                 "journal-text",
                 "gear",
             ],
-            default_index=0,
+            default_index=default_idx,
         )
 
+    st.session_state.page = selected
     return selected
