@@ -1079,3 +1079,23 @@ pymupdf.FileNotFoundError: no such file: 'storage\original\pdf\96a8c528-a2d6-4d6
 2026-07-23 12:46:46.379 | INFO     | app.main:<module>:37 - Application Started
 2026-07-23 12:46:46.380 | INFO     | app.main:lifespan:15 - Initializing AI Components...
 2026-07-23 12:46:46.407 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 12:47:09.546 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 12:47:09.547 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 12:47:09.575 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 12:52:12.206 | INFO     | app.ai.processor.document_processor:process:79 - Successfully reloaded global AI container with new document chunks.
+2026-07-23 12:52:12.206 | INFO     | app.ai.processor.document_processor:process:81 - Successfully processed document 6fe265dc-0dea-47e5-b168-e9c30302d3f8
+2026-07-23 13:32:11.455 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-23 13:32:35.145 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 13:32:35.146 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 13:32:35.196 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 13:37:07.995 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-23 13:37:33.217 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 13:37:33.218 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 13:37:33.269 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 13:37:56.580 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 13:37:56.581 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 13:37:56.632 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 13:38:19.576 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 13:38:19.577 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 13:38:19.626 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 13:40:44.097 | INFO     | app.main:lifespan:21 - Application Shutdown

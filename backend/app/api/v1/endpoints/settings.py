@@ -35,7 +35,7 @@ def update_settings(
     db: Session = Depends(get_db),
 ):
     settings.USE_NVIDIA = data.use_nvidia
-    if data.nvidia_api_key and not data.nvidia_api_key.endswith("..."):
+    if data.nvidia_api_key and "..." not in data.nvidia_api_key:
         settings.NVIDIA_API_KEY = data.nvidia_api_key
     settings.NVIDIA_LLM_MODEL = data.nvidia_llm_model
     settings.NVIDIA_EMBEDDING_MODEL = data.nvidia_embedding_model

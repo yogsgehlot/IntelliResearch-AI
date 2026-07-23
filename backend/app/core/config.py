@@ -16,7 +16,7 @@ class Settings(BaseSettings):
     REFRESH_TOKEN_EXPIRE_DAYS: int
 
     USE_NVIDIA: bool = False
-    NVIDIA_API_KEY: str | None = "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"
+    NVIDIA_API_KEY: str | None = None
     NVIDIA_LLM_MODEL: str = "meta/llama-3.1-70b-instruct"
     NVIDIA_EMBEDDING_MODEL: str = "nvidia/llama-nemotron-embed-vl-1b-v2"
 
