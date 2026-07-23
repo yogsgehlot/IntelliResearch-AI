@@ -52,6 +52,23 @@ class RAGService:
             documents,
         )
 
+        if not documents:
+            answer = "I couldn't find enough information in the uploaded documents."
+            memory.add(
+                session_id,
+                "user",
+                question,
+            )
+            memory.add(
+                session_id,
+                "assistant",
+                answer,
+            )
+            return {
+                "answer": answer,
+                "sources": [],
+            }
+
         context = ContextBuilder.build(documents)
 
         prompt = PromptBuilder.build(

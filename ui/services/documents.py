@@ -28,5 +28,11 @@ class DocumentService:
             token=token,
         )
 
+    def delete(self, token, document_id):
+        return api.delete(
+            f"/documents/{document_id}",
+            token=token,
+        )
+
 
 document_service = DocumentService()

@@ -866,3 +866,216 @@
 2026-07-22 18:21:20.114 | INFO     | app.main:<module>:37 - Application Started
 2026-07-22 18:21:20.115 | INFO     | app.main:lifespan:15 - Initializing AI Components...
 2026-07-22 18:21:20.165 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 10:27:09.790 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 10:27:09.791 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 10:27:09.876 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 10:39:46.412 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-23 10:40:19.122 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 10:40:19.122 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 10:40:19.172 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 10:40:41.347 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-23 10:41:10.530 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 10:41:10.531 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 10:41:10.589 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 10:41:25.989 | ERROR    | app.ai.processor.document_processor:process:77 - Error processing document 57489188-13a3-4305-8e11-67d04e750480: no such file: 'storage\original\pdf\96a8c528-a2d6-4d60-9d62-2f3e627717e1.pdf'
+Traceback (most recent call last):
+
+  File "D:\Personal_work\AIML Projects\IntelliResearch-AI\backend\scratch\query_documents.py", line 15, in <module>
+    DocumentProcessor.process(doc_id)
+    │                 │       └ UUID('57489188-13a3-4305-8e11-67d04e750480')
+    │                 └ <staticmethod(<function DocumentProcessor.process at 0x000001583914A340>)>
+    └ <class 'app.ai.processor.document_processor.DocumentProcessor'>
+
+> File "D:\Personal_work\AIML Projects\IntelliResearch-AI\backend\app\ai\processor\document_processor.py", line 30, in process
+    text = parser.parse(document.storage_path)
+           │      │     │        └ <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x00000157E8297E20>
+           │      │     └ <app.models.document.Document object at 0x00000158391CAE40>
+           │      └ <function PDFParser.parse at 0x00000158252BFF60>
+           └ <app.ai.parser.pdf_parser.PDFParser object at 0x00000158252F6A50>
+
+  File "D:\Personal_work\AIML Projects\IntelliResearch-AI\backend\app\ai\parser\pdf_parser.py", line 6, in parse
+    document = fitz.open(path)
+               │    │    └ 'storage\\original\\pdf\\96a8c528-a2d6-4d60-9d62-2f3e627717e1.pdf'
+               │    └ <class 'pymupdf.Document'>
+               └ <module 'fitz' from 'D:\\Personal_work\\AIML Projects\\IntelliResearch-AI\\backend\\.venv\\Lib\\site-packages\\fitz\\__init__...
+
+  File "D:\Personal_work\AIML Projects\IntelliResearch-AI\backend\.venv\Lib\site-packages\pymupdf\__init__.py", line 3001, in __init__
+    raise FileNotFoundError(f"no such file: '{filename}'")
+          │                                   └ 'storage\\original\\pdf\\96a8c528-a2d6-4d60-9d62-2f3e627717e1.pdf'
+          └ <class 'pymupdf.FileNotFoundError'>
+
+pymupdf.FileNotFoundError: no such file: 'storage\original\pdf\96a8c528-a2d6-4d60-9d62-2f3e627717e1.pdf'
+2026-07-23 10:41:40.028 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 10:41:40.029 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 10:41:40.085 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 10:42:08.610 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 10:42:08.611 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 10:42:08.660 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 10:42:37.125 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 10:42:37.126 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 10:42:37.179 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 10:43:05.228 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 10:43:05.229 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 10:43:05.277 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 10:43:33.053 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 10:43:33.054 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 10:43:33.102 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 10:46:16.375 | INFO     | app.ai.processor.document_processor:process:73 - Successfully reloaded global AI container with new document chunks.
+2026-07-23 10:46:16.376 | INFO     | app.ai.processor.document_processor:process:75 - Successfully processed document e0291d8e-81e6-42c4-b07f-bbc44dc6bf7d
+2026-07-23 10:46:17.966 | INFO     | app.ai.processor.document_processor:process:73 - Successfully reloaded global AI container with new document chunks.
+2026-07-23 10:46:17.966 | INFO     | app.ai.processor.document_processor:process:75 - Successfully processed document 79d2699a-4264-48f1-9685-9de73d148620
+2026-07-23 10:49:55.720 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-23 10:50:28.350 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 10:50:28.351 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 10:50:28.353 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 10:50:58.069 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 10:50:58.069 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 10:50:58.137 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 10:51:26.704 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 10:51:26.705 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 10:51:26.759 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 10:51:55.400 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 10:51:55.401 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 10:51:55.454 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 10:52:47.633 | INFO     | app.ai.processor.document_processor:process:73 - Successfully reloaded global AI container with new document chunks.
+2026-07-23 10:52:47.634 | INFO     | app.ai.processor.document_processor:process:75 - Successfully processed document 794b2d9c-9d73-4338-9a74-59dcfe34d5fa
+2026-07-23 10:55:52.470 | INFO     | app.ai.processor.document_processor:process:73 - Successfully reloaded global AI container with new document chunks.
+2026-07-23 10:55:52.470 | INFO     | app.ai.processor.document_processor:process:75 - Successfully processed document c35bf039-ab54-446c-bdad-7fb5769c0084
+2026-07-23 10:55:52.584 | INFO     | app.ai.processor.document_processor:process:73 - Successfully reloaded global AI container with new document chunks.
+2026-07-23 10:55:52.584 | INFO     | app.ai.processor.document_processor:process:75 - Successfully processed document 7f1cb2cf-f06a-4d6b-98a3-f38a2e38bbe5
+2026-07-23 10:59:48.004 | INFO     | app.ai.processor.document_processor:process:73 - Successfully reloaded global AI container with new document chunks.
+2026-07-23 10:59:48.004 | INFO     | app.ai.processor.document_processor:process:75 - Successfully processed document be90e449-13d7-4461-b593-341bdede83ca
+2026-07-23 11:03:58.876 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-23 11:04:32.235 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 11:04:32.235 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 11:04:32.267 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 11:04:55.485 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-23 11:05:26.927 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 11:05:26.928 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 11:05:26.960 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 11:05:29.798 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-23 11:06:00.919 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 11:06:00.920 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 11:06:00.947 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 11:06:31.025 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 11:06:31.026 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 11:06:31.054 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 11:06:59.384 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 11:06:59.385 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 11:06:59.414 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 11:07:28.109 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 11:07:28.110 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 11:07:28.136 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 11:11:23.578 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-23 11:11:56.014 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 11:11:56.015 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 11:11:56.045 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 11:14:48.351 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-23 11:15:17.871 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 11:15:17.872 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 11:15:17.899 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 11:15:46.671 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 11:15:46.672 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 11:15:46.699 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 11:16:15.352 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 11:16:15.353 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 11:16:15.378 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 11:16:44.243 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 11:16:44.244 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 11:16:44.271 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 11:18:02.976 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-23 11:18:33.874 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 11:18:33.876 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 11:18:33.901 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 11:19:02.035 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 11:19:02.036 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 11:19:02.063 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 11:19:29.990 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 11:19:29.991 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 11:19:30.017 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 11:29:02.288 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-23 11:31:36.677 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 11:31:36.678 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 11:31:36.706 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 11:34:36.766 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-23 11:35:00.786 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 11:35:00.787 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 11:35:00.815 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 11:35:25.232 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 11:35:25.233 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 11:35:25.261 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 11:35:49.492 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 11:35:49.493 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 11:35:49.521 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 11:36:13.575 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 11:36:13.576 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 11:36:13.607 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 11:36:36.584 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 11:36:36.584 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 11:36:36.610 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 11:39:49.892 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-23 11:40:14.372 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 11:40:14.373 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 11:40:14.400 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 11:40:15.273 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-23 11:40:38.977 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 11:40:38.978 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 11:40:39.007 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 11:41:01.717 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 11:41:01.718 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 11:41:01.747 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 11:41:24.508 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 11:41:24.509 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 11:41:24.535 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 11:43:11.176 | INFO     | app.ai.processor.document_processor:process:73 - Successfully reloaded global AI container with new document chunks.
+2026-07-23 11:43:11.176 | INFO     | app.ai.processor.document_processor:process:75 - Successfully processed document caaea83e-e999-4d4f-a0fd-c2b41ce173cd
+2026-07-23 11:43:11.750 | INFO     | app.ai.processor.document_processor:process:73 - Successfully reloaded global AI container with new document chunks.
+2026-07-23 11:43:11.750 | INFO     | app.ai.processor.document_processor:process:75 - Successfully processed document f936990c-87ce-4497-86d8-0affbea4e230
+2026-07-23 11:43:12.622 | INFO     | app.ai.processor.document_processor:process:73 - Successfully reloaded global AI container with new document chunks.
+2026-07-23 11:43:12.622 | INFO     | app.ai.processor.document_processor:process:75 - Successfully processed document 752dabb9-a164-49f3-bb87-4841259391b5
+2026-07-23 11:47:11.135 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-23 11:47:34.834 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 11:47:34.835 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 11:48:19.122 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 11:48:19.123 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 11:48:19.763 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 11:49:07.366 | INFO     | app.ai.processor.document_processor:process:79 - Successfully reloaded global AI container with new document chunks.
+2026-07-23 11:49:07.366 | INFO     | app.ai.processor.document_processor:process:81 - Successfully processed document 158036e2-7d99-4aeb-8f10-eb4129944ec5
+2026-07-23 11:49:12.401 | INFO     | app.ai.processor.document_processor:process:79 - Successfully reloaded global AI container with new document chunks.
+2026-07-23 11:49:12.401 | INFO     | app.ai.processor.document_processor:process:81 - Successfully processed document 0631f046-924d-4bb7-9a86-f120ef11cc07
+2026-07-23 11:49:15.482 | INFO     | app.ai.processor.document_processor:process:79 - Successfully reloaded global AI container with new document chunks.
+2026-07-23 11:49:15.482 | INFO     | app.ai.processor.document_processor:process:81 - Successfully processed document ff6e31a6-1e52-4fcb-86ce-70ab1aba5ba5
+2026-07-23 12:20:01.577 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-23 12:20:47.922 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 12:20:47.923 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 12:20:47.982 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 12:21:11.368 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 12:21:11.368 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 12:21:11.394 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 12:21:34.428 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 12:21:34.429 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 12:21:34.456 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 12:21:57.778 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 12:21:57.779 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 12:21:57.806 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 12:25:49.955 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-23 12:26:15.211 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 12:26:15.213 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 12:26:15.247 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 12:44:23.822 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-23 12:44:47.905 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 12:44:47.906 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 12:44:47.934 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 12:45:13.820 | INFO     | app.main:lifespan:21 - Application Shutdown
+2026-07-23 12:45:37.374 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 12:45:37.375 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 12:45:37.408 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 12:46:00.376 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 12:46:00.377 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 12:46:00.404 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 12:46:23.365 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 12:46:23.366 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 12:46:23.393 | INFO     | app.main:lifespan:17 - AI Components Ready
+2026-07-23 12:46:46.379 | INFO     | app.main:<module>:37 - Application Started
+2026-07-23 12:46:46.380 | INFO     | app.main:lifespan:15 - Initializing AI Components...
+2026-07-23 12:46:46.407 | INFO     | app.main:lifespan:17 - AI Components Ready

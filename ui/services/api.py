@@ -55,5 +55,18 @@ class APIClient:
             headers=headers,
         )
 
+    def delete(
+        self,
+        endpoint,
+        token=None,
+    ):
+        headers = {}
+        if token:
+            headers["Authorization"] = f"Bearer {token}"
+        return requests.delete(
+            self.base_url + endpoint,
+            headers=headers,
+        )
+
 
 api = APIClient()

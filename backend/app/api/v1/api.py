@@ -7,6 +7,7 @@ from app.api.v1.endpoints.projects import router as project_router
 from app.api.v1.endpoints.reports import (router as report_router,)
 from app.api.v1.endpoints.research_notes import (router as notes_router,)
 from app.api.v1.endpoints.research_summary import (router as summary_router,)
+from app.api.v1.endpoints.settings import router as settings_router
 
 api_router = APIRouter()
 
@@ -20,3 +21,4 @@ api_router.include_router(report_router,)
 
 api_router.include_router(notes_router)
 api_router.include_router(summary_router)
+api_router.include_router(settings_router)

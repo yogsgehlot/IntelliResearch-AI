@@ -11,21 +11,31 @@ class QueryRewriter:
         question: str,
         history: str,
     ):
+        if history:
+            prompt = f"""
+Given the following conversation history and the latest user question, rewrite it into a standalone question.
+Only incorporate context from the history if the latest question explicitly refers to it (using pronouns or references like "it", "they", "him", "her", "that", "first paper", etc.).
+If the latest question is a new query or a standalone topic, DO NOT add or invent details from the history.
+Correct any obvious spelling mistakes, typos, or name variations (e.g., "Kennath" -> "Kenneth") to ensure accurate retrieval.
+Return ONLY the standalone rewritten question. Do not include any intro, explanation, or conversational text.
 
-        if not history:
-            return question
-
-        prompt = f"""
 Conversation History:
-
 {history}
 
-Rewrite the latest user question into a standalone question.
+Latest Question:
+{question}
 
-Question:
+Standalone Question:
+"""
+        else:
+            prompt = f"""
+Given the user's question, correct any obvious spelling mistakes, typos, or name variations (e.g., "Kennath" -> "Kenneth") and return it as a clean standalone search query.
+Return ONLY the corrected question. Do not include any intro, explanation, or conversational text.
+
+User Question:
 {question}
 
 Standalone Question:
 """
 
-        return self.llm.generate(prompt)
+        return self.llm.generate(prompt).strip()

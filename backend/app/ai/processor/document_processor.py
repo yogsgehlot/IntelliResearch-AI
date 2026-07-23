@@ -12,7 +12,10 @@ from app.ai.vectorstore.faiss_store import FaissStore
 from app.ai.vectorstore.metadata_store import MetadataStore
 
 
+import threading
+
 class DocumentProcessor:
+    _lock = threading.Lock()
 
     @staticmethod
     def process(document_id: UUID) -> None:
@@ -34,31 +37,34 @@ class DocumentProcessor:
             embedding_service = EmbeddingService()
             vector_store = FaissStore()
             metadata_store = MetadataStore()
-            metadata = metadata_store.load()
             
-            for index, chunk in enumerate(chunks):
-                db.add(
-                    DocumentChunk(
-                        document_id=document.id,
-                        chunk_index=index,
-                        content=chunk,
-                        token_count=len(chunk.split()),
+            with DocumentProcessor._lock:
+                metadata = metadata_store.load()
+                
+                for index, chunk in enumerate(chunks):
+                    db.add(
+                        DocumentChunk(
+                            document_id=document.id,
+                            chunk_index=index,
+                            content=chunk,
+                            token_count=len(chunk.split()),
+                        )
                     )
-                )
-                vector = embedding_service.embed_text(chunk)
-                vector_store.add(vector.reshape(1, -1))
-                metadata.append({
-                    "document_id": str(document.id),
-                    "document_name": document.original_name,
-                    "page": None,                 # We'll populate this for PDFs later
-                    "chunk_index": index,
-                    "content": chunk,
-                    "language": language,
-                    "tokens": len(chunk.split()),
-                    "project_id": str(document.project_id) if document.project_id else None,
-                })
+                    vector = embedding_service.embed_text(chunk)
+                    vector_store.add(vector.reshape(1, -1))
+                    metadata.append({
+                        "document_id": str(document.id),
+                        "document_name": document.original_name,
+                        "page": None,                 # We'll populate this for PDFs later
+                        "chunk_index": index,
+                        "content": chunk,
+                        "language": language,
+                        "tokens": len(chunk.split()),
+                        "project_id": str(document.project_id) if document.project_id else None,
+                    })
 
-            metadata_store.save(metadata)
+                metadata_store.save(metadata)
+                
             document.language = language
             document.status = DocumentStatus.READY
             db.commit()

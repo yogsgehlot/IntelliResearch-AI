@@ -51,7 +51,7 @@ def render():
             else:
                 for doc in docs:
                     with st.container(border=True):
-                        col1, col2, col3 = st.columns([5, 2, 2])
+                        col1, col2, col3, col4 = st.columns([5, 2, 2, 1])
                         with col1:
                             st.markdown(f"**📄 {doc['original_name']}**")
                             size_mb = doc['file_size'] / (1024 * 1024)
@@ -71,6 +71,14 @@ def render():
                             if status == "PROCESSING":
                                 if st.button("🔄 Refresh Status", key=f"ref_{doc['id']}"):
                                     st.rerun()
+                        with col4:
+                            if st.button("🗑", key=f"del_{doc['id']}", help="Delete Document"):
+                                response = document_service.delete(st.session_state.token, doc['id'])
+                                if response.status_code == 200:
+                                    st.toast("Document deleted successfully")
+                                    st.rerun()
+                                else:
+                                    st.error("Failed to delete document")
         else:
             st.error("Failed to load uploaded documents.")
     except Exception as e:

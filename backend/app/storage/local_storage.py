@@ -5,7 +5,7 @@ from app.storage.base import BaseStorage
 
 class LocalStorage(BaseStorage):
 
-    ROOT = Path("storage/original")
+    ROOT = Path(__file__).resolve().parents[2] / "storage" / "original"
 
     def save(self, file, filename: str):
         extension = filename.split(".")[-1].lower()

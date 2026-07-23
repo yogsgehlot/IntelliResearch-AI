@@ -5,7 +5,7 @@ import threading
 
 class MetadataStore:
 
-    FILE = Path("storage/faiss/metadata.json")
+    FILE = Path(__file__).resolve().parents[3] / "storage" / "faiss" / "metadata.json"
     _lock = threading.Lock()
 
     def load(self):
